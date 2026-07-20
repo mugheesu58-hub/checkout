@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Checkout Page</title>
+</head>
+<style>
+   /* Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header styling */
+h1 {
+  color: #1a202c;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  border-bottom: 3px solid #3b82f6;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Section & Layout styling */
+section {
+  background: #ffffff;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 600px;
+}
+
+h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+/* Cart Item Image styling */
+section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Form & Input Fields styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+label span {
+  color: #dc2626; /* Makes the required '*' asterisk red */
+  margin-left: 0.25rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Interactive focus states for accessibility */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Help text formatting */
+#card-number-help {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: -0.25rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* Submit Button styling */
+input[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+}
+</style>
+
+<body>
+<h1>Checkout</h1>
+<section>
+    <h2>Your Cart</h2>
+    <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="A colorful Rubik's cube item in the cart" />
+    </section>
+    <section>
+        <h2>Payment Information</h2>
+        <form>
+            <label for="card-name">Name on card<span aria-hidden="true">*</span>
+            </label>
+            <input id="card-name" name="card-name" type="text" required/>
+            <label for="card-number">Card number<span aria-hidden="true">*</span>
+            </label>
+            <input id="card-number" name="card-number" type="text" aria-describedby="card-number-help" required>
+            </label>
+            <p id="card-number-help">Format:16 digits without spaces or dashes.</p>
+            <input type="submit" value="Submit Payment"/>
+            </form>
+            </section>
+
+</body>
+
+</html>
